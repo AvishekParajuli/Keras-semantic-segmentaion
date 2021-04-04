@@ -1,11 +1,11 @@
-# Keras-LinkNet
+# Keras-Semantic-Segmentation
 
-Keras implementation of [*LinkNet: Exploiting Encoder Representations for Efficient Semantic Segmentation*](https://arxiv.org/abs/1707.03718), ported from the lua-torch ([LinkNet](https://github.com/e-lab/LinkNet)) and PyTorch ([pytorch-linknet](https://github.com/e-lab/pytorch-linknet)) implementation, both created by the authors.
+Keras implementation of various Net and comparision of performance on [CamVid](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) and [Cityscapes](https://www.cityscapes-dataset.com/)  dataset.
 
 |                                Dataset                               | Classes <sup>1</sup> | Input resolution | Batch size | Mean IoU (%) |
 |:--------------------------------------------------------------------:|:--------------------:|:----------------:|:----------:|:------------:|
-| [CamVid](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) |          12          |      960x480     |      2     |     47.15<sup>2</sup>    |
-|           [Cityscapes](https://www.cityscapes-dataset.com/)          |          20          |     1024x512     |      2     |     53.37<sup>3</sup>    |
+| CamVid |          12          |      960x480     |      2     |     47.15<sup>2</sup>    |
+| Cityscapes         |          20          |     1024x512     |      2     |     53.37<sup>3</sup>    |
 
 <sup>1</sup> Includes the unlabeled/void class.<br/>
 <sup>2</sup> Test set.<br/>
@@ -20,7 +20,7 @@ Keras implementation of [*LinkNet: Exploiting Encoder Representations for Effici
 
 ## Usage
 
-Run [``main.py``](https://github.com/davidtvs/Keras-LinkNet/blob/master/main.py), the main script file used for training and/or testing the model. The following options are supported:
+Run [``main.py``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/blob/master/main.py), the main script file used for training and/or testing the model. The following options are supported:
 
 ```
 python main.py [-h] [--mode {train,test,full}] [--resume]
@@ -61,13 +61,18 @@ python main.py -m test --checkpoint-dir save/folder/ --name model_name --dataset
 
 ### Folders
 
-- [``data``](https://github.com/davidtvs/Keras-LinkNet/tree/master/data): Contains code to load the supported datasets.
-- [``metrics``](https://github.com/davidtvs/Keras-LinkNet/tree/master/metric): Evaluation-related metrics.
-- [``models``](https://github.com/davidtvs/Keras-LinkNet/tree/master/models): LinkNet model definition.
-- [``checkpoints``](https://github.com/davidtvs/Keras-LinkNet/tree/master/checkpoints): By default, ``main.py`` will save models in this folder. The pre-trained encoder (ResNet18) trained on ImageNet can be found here.
+- [``data``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/tree/master/data): Contains code to load the supported datasets.
+- [``metrics``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/tree/master/metric): Evaluation-related metrics.
+- [``models``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/tree/master/models): LinkNet model definition.
+- [``checkpoints``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/tree/master/checkpoints): By default, ``main.py`` will save models in this folder. The pre-trained encoder (ResNet18) trained on ImageNet can be found here.
 
 ### Files
 
-- [``args.py``](https://github.com/davidtvs/Keras-LinkNet/blob/master/arg.py): Contains all command-line options.
-- [``main.py``](https://github.com/davidtvs/Keras-LinkNet/blob/master/main.py): Main script file used for training and/or testing the model.
-- [``callbacks.py``](https://github.com/davidtvs/Keras-LinkNet/blob/master/callbacks.py): Custom callbacks are defined here.
+- [``args.py``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/blob/master/arg.py): Contains all command-line options.
+- [``main.py``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/blob/master/main.py): Main script file used for training and/or testing the model.
+- [``callbacks.py``](https://github.com/AvishekParajuli/Keras-semantic-segmentaion/blob/master/callbacks.py): Custom callbacks are defined here.
+
+## References:
+- [*LinkNet: Exploiting Encoder Representations for Efficient Semantic Segmentation*](https://arxiv.org/abs/1707.03718)
+- SegNet
+- Unet
