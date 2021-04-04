@@ -2,16 +2,18 @@
 
 Keras implementation of various Net and comparision of performance on [CamVid](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) and [Cityscapes](https://www.cityscapes-dataset.com/)  dataset.
 
-|Model Name   |  Dataset       | Classes | Input resolution | Batch size | Mean IoU (%) | Accuracy (val) |
+|Model Name   |  Dataset       | Classes<sup>1</sup> | Input resolution | Batch size | Mean IoU (%) | Accuracy (val) |
 |-------------|----------------|---------|------------------|------------|--------------|----------------|
-| LinkNet     | CamVid         | 12      |      960x480     |      2     |     47.15    |                |
-| LinkNet     | Cityscapes     | 20      |     960x480      |      2     |     53.37    |                |
+| LinkNet     | CamVid         | 12      |      960x480     |      8     |     47.15    |                |
+| LinkNet     | Cityscapes     | 20      |     960x480      |      4     |     53.37    |                |
+| U-Net     | CamVid         | 12      |      960x480     |      -     |     -   |                |
+| U-Net     | CamVid         | 12      |      960x480     |      -     |     -    |                |
 
 <sup>1</sup> Includes the unlabeled/void class.<br/>
 
 Example Results:
 ![](results/camvid/Figure_3.png)
-![](results/tb_pred.png)
+![](results/tb_pred.PNG)
 
 ## Installation
 
