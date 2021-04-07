@@ -7,7 +7,7 @@ Keras implementation of various Net and comparision of performance on [CamVid](h
 | LinkNet     | CamVid         | 12      |      960x480     |      8     |     47.15    |                |
 | LinkNet     | Cityscapes     | 20      |     960x480      |      4     |     53.37    |                |
 | U-Net     | CamVid         | 12      |      960x480     |      -     |     -   |                |
-| U-Net     | CamVid         | 12      |      960x480     |      -     |     -    |                |
+| U-Net     | Cityscapes         | 20      |      960x480     |      -     |     -    |                |
 
 <sup>1</sup> Includes the unlabeled/void class.<br/>
 
